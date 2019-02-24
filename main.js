@@ -63,7 +63,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p [appBackgroundColor]=\"'red'\"> test </p>\n"
+module.exports = "<p [appBackgroundColor]=\"'red'\"> Red </p>\n"
 
 /***/ }),
 
