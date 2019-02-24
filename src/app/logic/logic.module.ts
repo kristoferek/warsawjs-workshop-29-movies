@@ -9,12 +9,16 @@ import { PageVideoProfileComponent } from './components/page-video-profile/page-
 import { LogicRoutingModule } from './logic-routing.module';
 
 import { MoviesService } from './movies.service';
+import { VideoListComponent } from './components/video-list/video-list.component';
+import { VideoListItemComponent } from './components/video-list-item/video-list-item.component';
 @NgModule({
     declarations: [
         PageVideoListComponent,
         PageVideoNotFoundComponent,
         PageVideoProfileComponent,
-        PageVideoNotFoundComponent
+        PageVideoNotFoundComponent,
+        VideoListComponent,
+        VideoListItemComponent
     ],
     providers: [
         MoviesService
