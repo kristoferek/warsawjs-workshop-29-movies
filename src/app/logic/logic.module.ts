@@ -16,12 +16,11 @@ import { VideoListItemComponent } from './components/video-list-item/video-list-
         PageVideoListComponent,
         PageVideoNotFoundComponent,
         PageVideoProfileComponent,
-        PageVideoNotFoundComponent,
         VideoListComponent,
         VideoListItemComponent
     ],
     providers: [
-        MoviesService
+        MoviesService,
     ],
     imports: [
         LogicRoutingModule,
@@ -31,7 +30,9 @@ import { VideoListItemComponent } from './components/video-list-item/video-list-
     exports: [
         PageVideoListComponent,
         PageVideoNotFoundComponent,
-        PageVideoProfileComponent
+        PageVideoProfileComponent,
+        VideoListComponent,
+        VideoListItemComponent
     ]
 })
 export class LogicModule { }
