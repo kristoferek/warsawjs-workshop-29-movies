@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../movies.service';
 
 import { Movies } from '../../interfaces/movies.interface';
+import { Movie } from '../../interfaces/movie.interface';
 
 @Component({
   selector: 'app-page-video-list',
@@ -21,6 +22,6 @@ export class PageVideoListComponent implements OnInit {
         this.movies = await this.moviesProvider.fetchAsyncMovies();
     }
 
-    ngOnInit() {
+    async ngOnInit() {
     }
 }

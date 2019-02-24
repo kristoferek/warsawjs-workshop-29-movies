@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MoviesService } from '../logic/movies.service';
+import { Movies } from '../logic/interfaces/movies.interface';
 
 @Component({
   selector: 'app-page-home',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-home.component.css']
 })
 export class PageHomeComponent implements OnInit {
+    public favoriteMovies: Movies = [];
 
-  constructor() { }
+    constructor(
+        private moviesProvider: MoviesService
+    ) { }
 
-  ngOnInit() {
-  }
-
+    async ngOnInit() {
+        this.favoriteMovies = await this.moviesProvider.filterMovies('rambo');
+    }
 }

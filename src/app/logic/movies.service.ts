@@ -19,4 +19,10 @@ export class MoviesService {
       const movie = list.find(m => m.id === movieId);
       return movie;
   }
+
+  async filterMovies(term) {
+      const list = await this.fetchAsyncMovies();
+      const movies = list.filter(m => Object.values(m).find(v => v.includes(term)));
+      return movies;
+  }
 }
